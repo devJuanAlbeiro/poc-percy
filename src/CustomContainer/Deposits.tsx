@@ -20,7 +20,7 @@ export default function Deposits() {
         component="p"
         variant="h4"
       >
-        -$37,249.01
+        $7,249.01
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
         on 15 March, 2019
