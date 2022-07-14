@@ -12,5 +12,11 @@ context('Orders Panel', () => {
       'color',
       'rgb(25, 118, 210)'
     )
+
+    cy.get('[data-cy=see-more-orders-link]').should(
+      'have.css',
+      'justify-content',
+      'center'
+    )
   })
 })

@@ -95,11 +95,11 @@ export default function Orders() {
         </TableBody>
       </Table>
       <Box
-        data-cy="view-balance-deposits-link"
-        data-testid="view-balance-deposits-link"
+        data-cy="see-more-orders-link"
+        data-testid="see-more-orders-link"
         sx={{
           display: "flex",
-          justifyContent: "flex-end",
+          justifyContent: "center",
         }}
       >
         <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
