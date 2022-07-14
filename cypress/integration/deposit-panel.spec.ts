@@ -6,7 +6,7 @@ context('Deposit Panel', () => {
   it('can check Deposit panel', () => {
     cy.get('[data-cy=deposit-value]')
       .should('exist')
-      .should('contain', '-$37,249.01')
+      .should('contain', '$7,249.01')
 
     cy.get('[data-cy=deposit-value]').should(
       'have.css',
@@ -22,7 +22,7 @@ context('Deposit Panel', () => {
     cy.get('[data-cy=view-balance-deposits-link]').should(
       'have.css',
       'justify-content',
-      'flex-start'
+      'flex-center'
     )
   })
 })

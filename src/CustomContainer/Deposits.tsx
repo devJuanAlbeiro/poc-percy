@@ -20,17 +20,17 @@ export default function Deposits() {
         component="p"
         variant="h4"
       >
-        -$37,249.01
+        $7,249.01
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
-        on 15 March, 2019
+        on 15 March, 2019 Juan XxX
       </Typography>
       <Box
         data-cy="view-balance-deposits-link"
         data-testid="view-balance-deposits-link"
         sx={{
           display: "flex",
-          justifyContent: "flex-start",
+          justifyContent: "flex-end",
         }}
       >
         <Link color="primary" href="#" onClick={preventDefault}>
