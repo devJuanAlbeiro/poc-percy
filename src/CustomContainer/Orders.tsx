@@ -1,12 +1,13 @@
-import Link from '@mui/material/Link'
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableHead from '@mui/material/TableHead'
-import TableRow from '@mui/material/TableRow'
-import * as React from 'react'
+import Link from "@mui/material/Link";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import { Box } from "@mui/material";
+import * as React from "react";
 
-import Title from './Title'
+import Title from "./Title";
 
 // Generate Order Data
 function createData(
@@ -17,54 +18,54 @@ function createData(
   paymentMethod: string,
   amount: number
 ) {
-  return { amount, date, id, name, paymentMethod, shipTo }
+  return { amount, date, id, name, paymentMethod, shipTo };
 }
 
 const rows = [
   createData(
     0,
-    '16 Mar, 2019',
-    'Elvis Presley',
-    'Tupelo, MS',
-    'VISA ⠀•••• 3719',
+    "16 Mar, 2019",
+    "Elvis Presley",
+    "Tupelo, MS",
+    "VISA ⠀•••• 3719",
     312.44
   ),
   createData(
     1,
-    '16 Mar, 2019',
-    'Paul McCartney',
-    'London, UK',
-    'VISA ⠀•••• 2574',
+    "16 Mar, 2019",
+    "Paul McCartney",
+    "London, UK",
+    "VISA ⠀•••• 2574",
     866.99
   ),
   createData(
     2,
-    '16 Mar, 2019',
-    'Tom Scholz',
-    'Boston, MA',
-    'MC ⠀•••• 1253',
+    "16 Mar, 2019",
+    "Tom Scholz",
+    "Boston, MA",
+    "MC ⠀•••• 1253",
     100.81
   ),
   createData(
     3,
-    '16 Mar, 2019',
-    'Michael Jackson',
-    'Gary, IN',
-    'AMEX ⠀•••• 2000',
+    "16 Mar, 2019",
+    "Michael Jackson",
+    "Gary, IN",
+    "AMEX ⠀•••• 2000",
     654.39
   ),
   createData(
     4,
-    '15 Mar, 2019',
-    'Bruce Springsteen',
-    'Long Branch, NJ',
-    'VISA ⠀•••• 5919',
+    "15 Mar, 2019",
+    "Bruce Springsteen",
+    "Long Branch, NJ",
+    "VISA ⠀•••• 5919",
     212.79
   ),
-]
+];
 
 function preventDefault(event: React.MouseEvent) {
-  event.preventDefault()
+  event.preventDefault();
 }
 
 export default function Orders() {
@@ -74,7 +75,7 @@ export default function Orders() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
+            <TableCell sx={{ color: 'red' }}>Date</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Ship To</TableCell>
             <TableCell>Payment Method</TableCell>
@@ -93,9 +94,18 @@ export default function Orders() {
           ))}
         </TableBody>
       </Table>
-      <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-        See more orders
-      </Link>
+      <Box
+        data-cy="view-balance-deposits-link"
+        data-testid="view-balance-deposits-link"
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+        }}
+      >
+        <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
+          See more orders
+        </Link>
+      </Box>
     </React.Fragment>
-  )
+  );
 }
